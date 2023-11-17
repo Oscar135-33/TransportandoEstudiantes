@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Transportando Estudiantes</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script
+      src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Simple line icons-->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="styles.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+  </head>
+  <body id="page-top">
+    <!-- Navigation-->
+    <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-item"><a href="#page-top">Titulo</a></li>
+        <li class="sidebar-nav-item"><a href="#pasos">Pasos</a></li>
+        <li class="sidebar-nav-item"><a href="#selecciona">Selecciona</a></li>
+        <li class="sidebar-nav-item"><a href="#mapa">Mapa</a></li>
+        <li class="sidebar-nav-item">
+          <a href="#ListaDetalladaRutas">Mapas Interactivos</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a href="index.html">Cerrar Sesión</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- Titulo-->
+    <header class="masthead d-flex align-items-center">
+      <div class="container px-4 px-lg-5 text-center">
+        <h1 class="mb-1">Transportando Estudiantes</h1>
+        <h3 class="mb-5">
+          <em
+            >Página informativa sobre las rutas de camiones dentro y cerca de la
+            Ciudad Universitaria</em
+          >
+        </h3>
+        <a class="btn btn-primary btn-xl" href="#pasos">Pruebalo</a>
+      </div>
+    </header>
+    <!-- Pasos-->
+    <section
+      class="content-section bg-primary text-white text-center"
+      id="pasos"
+    >
+      <div class="container px-4 px-lg-5">
+        <div class="content-section-heading">
+          <h3 class="text-secondary mb-0">PASOS</h3>
+          <h2 class="mb-5">Como usar nuestro servicio</h2>
+        </div>
+        <div class="row gx-4 gx-lg-5">
+          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+            <span class="service-icon rounded-circle mx-auto mb-3"
+              ><i class="icon-screen-smartphone"></i
+            ></span>
+            <h4><strong>Accede</strong></h4>
+            <p class="text-faded mb-0">Entra a nuestro servicio</p>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+            <span class="service-icon rounded-circle mx-auto mb-3"
+              ><i class="icon-cursor-move"></i
+            ></span>
+            <h4><strong>Selecciona</strong></h4>
+            <p class="text-faded mb-0">Escoge la ruta deseada</p>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+            <span class="service-icon rounded-circle mx-auto mb-3"
+              ><i class="icon-location-pin"></i
+            ></span>
+            <h4><strong>Visualiza</strong></h4>
+            <p class="text-faded mb-0">Revisa e interactua con la ruta</p>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <span class="service-icon rounded-circle mx-auto mb-3"
+              ><i class="icon-share"></i
+            ></span>
+            <h4><strong>Comparte</strong></h4>
+            <p class="text-faded mb-0">
+              Pasa el chisme y recomienda a tus amigos y conocidos
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Selecciona-->
+    <section class="content-section" id="selecciona">
+      <div class="container px-4 px-lg-5">
+        <section class="content-section bg-primary text-white">
+          <div class="container px-4 px-lg-5 text-center">
+            <h2 class="mb-4">Inicia la aventura...</h2>
+            <div class="dropdown">
+              <select
+                class="custom-select"
+                id="opciones"
+                onselect="seleccionado()"
+              >
+                <option selected>Escoge...</option>
+                <option
+                  value="https://www.google.com/maps/d/embed?mid=1xhGagWq5dghNWMhMPMEUOKCzI3U&hl=es&ehbc=2E312F&ll=25.738440602035507%2C-100.30195728650186&z=13"
+                >
+                  Línea 2 del metro – Estación Universidad
+                </option>
+                <option
+                  value="https://www.google.com/maps/d/embed?mid=1j0-7ztESFWIBl7kVGC-HV__UQnM&hl=es&ehbc=2E312F"
+                >
+                  R-1 San Nicolás – Tecnológico Central
+                </option>
+                <option
+                  value="https://www.google.com/maps/d/embed?mid=1L0TluYAMsYyxsp4mYnbbZ2B1lnQ&hl=es&ehbc=2E312F"
+                >
+                  R-1 San Nicolás – Tecnológico Directo
+                </option>
+                <option
+                  value="https://www.google.com/maps/d/embed?mid=15Z478K9pPraV9CW-VMjdWDAaBcY&hl=es&ehbc=2E312F"
+                >
+                  R-14 Escobedo- La Pastora
+                </option>
+                <option
+                  value="https://www.google.com/maps/d/embed?mid=1tjTNlmIWHJ6jj6Nunm7AGOT9-7Q&hl=es&ehbc=2E312F"
+                >
+                  R-17 Auditorio San Pedro-UANL
+                </option>
+                <option
+                  value="https://www.google.com/maps/d/embed?mid=16vYoN6rXdsUScEUWZZlJn_wQ-iA&hl=es&ehbc=2E312F"
+                >
+                  R-17 Pío X-UANL
+                </option>
+                <option
+                  value="https://www.google.com/maps/d/embed?mid=1B1NUwPhZyiN8gGMDs89cB6xJsf4&hl=es&ehbc=2E312F"
+                >
+                  R-17 Santuario-UANL
+                </option>
+                <option
+                  value="https://www.google.com/maps/d/embed?mid=19T_dtBL0eKn4rzx1XNUsAuII3f8&hl=es&ehbc=2E312F"
+                >
+                  R-18 Independencia-UANL
+                </option>
+                <option
+                  value="https://www.google.com/maps/d/embed?mid=1oJie9osBaDzpy273LUAcbFpOYOM&hl=es&ehbc=2E312F"
+                >
+                  R-55 Buena Vista – Joya Los Ayala
+                </option>
+                <option
+                  value="https://www.google.com/maps/d/embed?mid=11gnSdKfWnICZDbhXSOGctRrKjSA&hl=es&ehbc=2E312F"
+                >
+                  R-65 Lázaro Cárdenas
+                </option>
+                <option
+                  value="https://www.google.com/maps/d/embed?mid=1bc49XF7TwfrOQEj5ocoES_oZOYo&hl=es&ehbc=2E312F"
+                >
+                  R-88 Cosmopolis- Portal de Sta. Rosa
+                </option>
+                <option
+                  value="https://www.google.com/maps/d/embed?mid=1wkxFttIBbAhxULxFC7jhdgIqH1g&hl=es&ehbc=2E312F"
+                >
+                  R-101 Ébanos
+                </option>
+                <option
+                  value="https://www.google.com/maps/d/embed?mid=1W9Gbv02NTuBLtd6iCBg-xkQCVFE&hl=es&ehbc=2E312F"
+                >
+                  R-101 Manantial
+                </option>
+                <option
+                  value="https://www.google.com/maps/d/embed?mid=1TS43ngsNzeqLpCavetAT-qjDKiU&hl=es&ehbc=2E312F"
+                >
+                  R-129 Santo Domingo – Mercado Juárez
+                </option>
+                <option
+                  value="https://www.google.com/maps/d/embed?mid=1eTXulaf0HXcpTAWzwUj8KAgPF-4&hl=es&ehbc=2E312F"
+                >
+                  R-134 Fresnos
+                </option>
+                <option
+                  value="https://www.google.com/maps/d/embed?mid=1UZ3bVWH5Sj4oSWs64BEX41Gnwn4&hl=es&ehbc=2E312F"
+                >
+                  R-134 Teléfonos
+                </option>
+                <option
+                  value="https://www.google.com/maps/d/embed?mid=1jiir24sNLElaOHPiycQmBmtOuyw&hl=es&ehbc=2E312F"
+                >
+                  R-207 Penitenciaria
+                </option>
+                <option
+                  value="https://www.google.com/maps/d/embed?mid=1ulsHfBUl90SVBa7Ha5RB3ipFtoo&hl=es&ehbc=2E312F"
+                >
+                  R-209 Escobedo – Punta de la Loma
+                </option>
+                <option
+                  value="https://www.google.com/maps/d/embed?mid=1_6bBR7jqE5ENQcgMQPT3KKLqZRU&hl=es&ehbc=2E312F"
+                >
+                  R-213 Directo – UANL
+                </option>
+                <option
+                  value="https://www.google.com/maps/d/embed?mid=1EGNB9hii931c3KbNuqmZ_4udc-0&hl=es&ehbc=2E312F"
+                >
+                  R-213 Quintas- UANL
+                </option>
+                <option
+                  value="https://www.google.com/maps/d/embed?mid=1mNjAYitIpqM1yOWPcn7xtJr8A_Q&hl=es&ehbc=2E312F"
+                >
+                  R-A215 Alimentadora Bella Vista – Penitenciaria – Ciudad
+                  Universitaria – Regina
+                </option>
+                <option
+                  value="https://www.google.com/maps/d/embed?mid=1Bmh3FXF_0HbxTowPzF3xu0EfBI4&hl=es&ehbc=2E312F"
+                >
+                  R-220 Pedregal
+                </option>
+                <option
+                  value="https://www.google.com/maps/d/embed?mid=1QRVn1aXjmiUtng140Ifj4cUcVbo&hl=es&ehbc=2E312F"
+                >
+                  R-220 Provileon
+                </option>
+                <option
+                  value="https://www.google.com/maps/d/embed?mid=12JtOVQLULt-DcFp596Zwa9oPYz4&hl=es&ehbc=2E312F"
+                >
+                  R-226 Buena Vista – Balcones – Alameda
+                </option>
+                <option
+                  value="https://www.google.com/maps/d/embed?mid=1_9WEhhzbKzZz1-vk7RWglqlYYx4&hl=es&ehbc=2E312F"
+                >
+                  R-227 Obispo – UANL por Clouthier
+                </option>
+              </select>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+    <!-- Map-->
+    <div class="map" id="mapa">
+      <iframe
+        id="ubicacion"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10166.408130061263!2d-100.31746428351414!3d25.725339104837236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662945396e136af%3A0x742b1e8288ee57a8!2sUniversidad%20Aut%C3%B3noma%20de%20Nuevo%20Le%C3%B3n!5e0!3m2!1ses!2smx!4v1669608678246!5m2!1ses!2smx"
+      ></iframe>
+    </div>
+    <br /><br /><br />
+    <div id="ListaDetalladaRutas">
+      <h1 id="MapasInteractivos">Más información interactiva de las rutas</h1>
+      <ul id="ListaRutas">
+        <li>
+          <a
+            href="https://www.google.com/maps/d/embed?mid=1xhGagWq5dghNWMhMPMEUOKCzI3U&hl=es&ehbc=2E312F&ll=25.738440602035507%2C-100.30195728650186&z=13"
+            >Línea 2 del metro – Estación Universidad</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.google.com/maps/d/embed?mid=1j0-7ztESFWIBl7kVGC-HV__UQnM&hl=es&ehbc=2E312F"
+            >R-1 San Nicolás – Tecnológico Central</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.google.com/maps/d/embed?mid=1L0TluYAMsYyxsp4mYnbbZ2B1lnQ&hl=es&ehbc=2E312F"
+            >R-1 San Nicolás – Tecnológico Directo</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.google.com/maps/d/embed?mid=15Z478K9pPraV9CW-VMjdWDAaBcY&hl=es&ehbc=2E312F"
+            >R-14 Escobedo- La Pastora</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.google.com/maps/d/embed?mid=1tjTNlmIWHJ6jj6Nunm7AGOT9-7Q&hl=es&ehbc=2E312F"
+            >R-17 Auditorio San Pedro-UANL</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.google.com/maps/d/embed?mid=16vYoN6rXdsUScEUWZZlJn_wQ-iA&hl=es&ehbc=2E312F"
+            >R-17 Pío X-UANL</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.google.com/maps/d/embed?mid=1B1NUwPhZyiN8gGMDs89cB6xJsf4&hl=es&ehbc=2E312F"
+            >R-17 Santuario-UANL</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.google.com/maps/d/embed?mid=19T_dtBL0eKn4rzx1XNUsAuII3f8&hl=es&ehbc=2E312F"
+            >R-18 Independencia-UANL</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.google.com/maps/d/embed?mid=1oJie9osBaDzpy273LUAcbFpOYOM&hl=es&ehbc=2E312F"
+            >R-55 Buena Vista – Joya Los Ayala</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.google.com/maps/d/embed?mid=11gnSdKfWnICZDbhXSOGctRrKjSA&hl=es&ehbc=2E312F"
+            >R-65 Lázaro Cárdenas</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.google.com/maps/d/embed?mid=1bc49XF7TwfrOQEj5ocoES_oZOYo&hl=es&ehbc=2E312F"
+            >R-88 Cosmopolis- Portal de Sta. Rosa</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.google.com/maps/d/embed?mid=1wkxFttIBbAhxULxFC7jhdgIqH1g&hl=es&ehbc=2E312F"
+            >R-101 Ébanos</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.google.com/maps/d/embed?mid=1W9Gbv02NTuBLtd6iCBg-xkQCVFE&hl=es&ehbc=2E312F"
+            >R-101 Manantial</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.google.com/maps/d/embed?mid=1TS43ngsNzeqLpCavetAT-qjDKiU&hl=es&ehbc=2E312F"
+            >R-129 Santo Domingo – Mercado Juárez</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.google.com/maps/d/embed?mid=1eTXulaf0HXcpTAWzwUj8KAgPF-4&hl=es&ehbc=2E312F"
+            >R-134 Fresnos</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.google.com/maps/d/embed?mid=1UZ3bVWH5Sj4oSWs64BEX41Gnwn4&hl=es&ehbc=2E312F"
+            >R-134 Teléfonos</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.google.com/maps/d/embed?mid=1jiir24sNLElaOHPiycQmBmtOuyw&hl=es&ehbc=2E312F"
+            >R-207 Penitenciaria</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.google.com/maps/d/embed?mid=1ulsHfBUl90SVBa7Ha5RB3ipFtoo&hl=es&ehbc=2E312F"
+            >R-209 Escobedo – Punta de la Loma</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.google.com/maps/d/embed?mid=1_6bBR7jqE5ENQcgMQPT3KKLqZRU&hl=es&ehbc=2E312F"
+            >R-213 Directo – UANL</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.google.com/maps/d/embed?mid=1EGNB9hii931c3KbNuqmZ_4udc-0&hl=es&ehbc=2E312F"
+            >R-213 Quintas- UANL</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.google.com/maps/d/embed?mid=1mNjAYitIpqM1yOWPcn7xtJr8A_Q&hl=es&ehbc=2E312F"
+            >R-A215 Alimentadora Bella Vista – Penitenciaria – Ciudad
+            Universitaria – Regina</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.google.com/maps/d/embed?mid=1Bmh3FXF_0HbxTowPzF3xu0EfBI4&hl=es&ehbc=2E312F"
+            >R-220 Pedregal</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.google.com/maps/d/embed?mid=1QRVn1aXjmiUtng140Ifj4cUcVbo&hl=es&ehbc=2E312F"
+            >R-220 Provileon</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.google.com/maps/d/embed?mid=12JtOVQLULt-DcFp596Zwa9oPYz4&hl=es&ehbc=2E312F"
+            >R-226 Buena Vista – Balcones – Alameda</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.google.com/maps/d/embed?mid=1_9WEhhzbKzZz1-vk7RWglqlYYx4&hl=es&ehbc=2E312F"
+            >R-227 Obispo – UANL por Clouthier</a
+          >
+        </li>
+      </ul>
+    </div>
+    <br /><br /><br />
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top"
+      ><i class="fas fa-angle-up"></i
+    ></a>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="scripts.js"></script>
+    <script>
+      $("#opciones").on("click", function (e) {
+        var valor = $(this).val();
+        if (valor != "Escoge...")
+          document.getElementById("ubicacion").src = valor;
+      });
+    </script>
+  </body>
+</html>

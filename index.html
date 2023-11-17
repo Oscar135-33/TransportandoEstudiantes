@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="loginstyles.css" />
+    <title>Iniciar Sesión</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+  </head>
+  <body>
+    <div class="box">
+      <span class="borderLine"></span>
+      <form>
+        <h2>Iniciar Sesión</h2>
+        <div class="inputbox">
+          <input type="text" id="logusername" required="required" />
+          <!-- Asigna un ID -->
+          <span>Usuario</span>
+          <i></i>
+        </div>
+        <div class="inputbox">
+          <input type="password" id="logpassword" required="required" />
+          <!-- Asigna un ID -->
+          <span>Contraseña</span>
+          <i></i>
+        </div>
+        <div class="signup">
+          <span>No tienes cuenta?</span>
+          <a href="signup.html">Registrate</a>
+        </div>
+        <button id="btn-login" onclick="validarCredenciales()">
+          Iniciar Sesión
+        </button>
+      </form>
+    </div>
+    <script src="loginscript.js"></script>
+    <script src="signup.js"></script>
+  </body>
+</html>
